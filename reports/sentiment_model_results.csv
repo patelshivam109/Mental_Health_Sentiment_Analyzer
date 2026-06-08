@@ -1,0 +1,5 @@
+Model,Accuracy,Weighted F1
+Logistic Regression,0.425,0.4196796338672769
+Tuned Logistic Regression,0.425,0.40723881570366505
+Naive Bayes,0.5,0.3745454545454545
+Linear SVM,0.375,0.36186868686868684

@@ -1,0 +1,4 @@
+Gender,Negative,Neutral,Positive
+Female,0.667,0.167,0.167
+Male,0.301,0.248,0.451
+Other,0.0,0.0,1.0
