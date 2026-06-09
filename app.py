@@ -427,9 +427,9 @@ def final_sentiment_output(text: str, model_prediction: str) -> tuple[str, float
 
     if polarity < -0.05 or matched_terms:
         return "Negative", polarity, matched_terms
-    if polarity > 0.05:
+    if polarity > 0.15:
         return "Positive", polarity, matched_terms
-    return model_prediction, polarity, matched_terms
+    return "Neutral", polarity, matched_terms
 
 
 cleaned_df, comments_df = load_data()
