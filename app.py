@@ -27,42 +27,51 @@ st.markdown(
     """
     <style>
     :root {
-        --app-bg: #f5f7fb;
+        --app-bg: #f6f3ee;
         --panel-bg: #ffffff;
-        --panel-soft: #f8fafc;
-        --text-main: #17212b;
-        --text-muted: #617080;
-        --border: #d9e1ea;
-        --brand: #2f6f9f;
-        --brand-strong: #255a82;
-        --green: #247a52;
-        --red: #b9444b;
-        --amber: #9a6a10;
+        --panel-soft: #faf7f2;
+        --text-main: #18212b;
+        --text-muted: #64707c;
+        --border: #d8d2c8;
+        --brand: #1f4e5f;
+        --brand-strong: #163947;
+        --brand-soft: #d9e7eb;
+        --accent: #6c8c6d;
+        --accent-soft: #e6f0e6;
+        --warm: #a06b46;
+        --warm-soft: #f3e7dc;
+        --rose: #a84a5a;
+        --rose-soft: #f7e7ea;
     }
     @media (prefers-color-scheme: dark) {
         :root {
-            --app-bg: #0e1117;
-            --panel-bg: #171b22;
-            --panel-soft: #202631;
-            --text-main: #f4f7fb;
-            --text-muted: #aab6c4;
-            --border: #303846;
-            --brand: #76b7e5;
-            --brand-strong: #9bcaf0;
-            --green: #58c58e;
-            --red: #ff7f87;
-            --amber: #f0c36a;
+            --app-bg: #11161c;
+            --panel-bg: #171d24;
+            --panel-soft: #1d242d;
+            --text-main: #f3f7fb;
+            --text-muted: #a7b3bf;
+            --border: #2d3844;
+            --brand: #8dc2cc;
+            --brand-strong: #b8e0e6;
+            --brand-soft: rgba(141, 194, 204, 0.12);
+            --accent: #84b38a;
+            --accent-soft: rgba(132, 179, 138, 0.12);
+            --warm: #d2a57b;
+            --warm-soft: rgba(210, 165, 123, 0.12);
+            --rose: #d77b8a;
+            --rose-soft: rgba(215, 123, 138, 0.12);
         }
     }
     .stApp {
         background:
-            radial-gradient(circle at top left, rgba(47, 111, 159, 0.10), transparent 34rem),
+            radial-gradient(circle at top left, rgba(31, 78, 95, 0.12), transparent 32rem),
+            radial-gradient(circle at bottom right, rgba(160, 107, 70, 0.08), transparent 26rem),
             var(--app-bg);
     }
     .block-container {
-        padding-top: 1.2rem;
+        padding-top: 1rem;
         padding-bottom: 2rem;
-        max-width: 1380px;
+        max-width: 1420px;
     }
     h1, h2, h3 {
         letter-spacing: 0;
@@ -76,13 +85,13 @@ st.markdown(
         border: 1px solid var(--border);
         border-radius: 8px;
         padding: 14px 16px;
-        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
     }
     [data-testid="stMetric"] * {
         color: var(--text-main) !important;
     }
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #102030 0%, #14283a 58%, #182536 100%);
+        background: linear-gradient(180deg, #13212b 0%, #152a35 55%, #182834 100%);
     }
     [data-testid="stSidebar"] * {
         color: #f6f8fb !important;
@@ -93,13 +102,14 @@ st.markdown(
         margin-bottom: 0.15rem;
     }
     .hero {
-        background: linear-gradient(135deg, #18344d 0%, #2f6f9f 56%, #3f8b6b 100%);
-        border: 1px solid rgba(255,255,255,0.14);
-        border-radius: 10px;
-        padding: 26px 30px;
+        background:
+            linear-gradient(135deg, rgba(24,49,60,0.96) 0%, rgba(31,78,95,0.96) 54%, rgba(160,107,70,0.94) 100%);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 14px;
+        padding: 24px 28px;
         color: #ffffff;
-        box-shadow: 0 18px 42px rgba(15, 23, 42, 0.18);
-        margin-bottom: 1.2rem;
+        box-shadow: 0 18px 42px rgba(15, 23, 42, 0.20);
+        margin-bottom: 1rem;
     }
     .hero-kicker {
         font-size: 0.78rem;
@@ -150,10 +160,10 @@ st.markdown(
     .kpi-card {
         background: var(--panel-bg);
         border: 1px solid var(--border);
-        border-radius: 9px;
+        border-radius: 12px;
         padding: 18px 18px 16px;
         min-height: 124px;
-        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
     }
     .kpi-label {
         color: var(--text-muted);
@@ -175,10 +185,10 @@ st.markdown(
         margin-top: 0.5rem;
     }
     .section-title {
-        margin: 1.35rem 0 0.55rem;
+        margin: 1.15rem 0 0.5rem;
     }
     .section-title h2 {
-        font-size: 1.28rem;
+        font-size: 1.18rem;
         margin: 0;
         font-weight: 800;
     }
@@ -190,7 +200,7 @@ st.markdown(
     .panel {
         background: var(--panel-bg);
         border: 1px solid var(--border);
-        border-radius: 9px;
+        border-radius: 12px;
         padding: 18px;
         box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
         margin-bottom: 1rem;
@@ -203,7 +213,7 @@ st.markdown(
         border-left: 4px solid var(--brand);
         background: var(--panel-soft);
         color: var(--text-main);
-        border-radius: 7px;
+        border-radius: 9px;
         padding: 12px 14px;
         font-size: 0.95rem;
     }
@@ -211,9 +221,9 @@ st.markdown(
         display: inline-block;
         padding: 0.28rem 0.62rem;
         border-radius: 999px;
-        background: rgba(47, 111, 159, 0.12);
+        background: var(--brand-soft);
         color: var(--brand-strong);
-        border: 1px solid rgba(47, 111, 159, 0.22);
+        border: 1px solid rgba(31, 78, 95, 0.18);
         font-size: 0.8rem;
         font-weight: 800;
         margin-bottom: 0.65rem;
@@ -228,30 +238,52 @@ st.markdown(
     }
     .status-note {
         padding: 13px 15px;
-        border-left: 4px solid #2f6f9f;
+        border-left: 4px solid var(--brand);
         background: var(--panel-soft);
         color: var(--text-main);
-        border-radius: 7px;
+        border-radius: 9px;
         margin: 0.25rem 0 1rem;
     }
     .risk-note {
         padding: 13px 15px;
-        border-left: 4px solid #c44e52;
-        background: rgba(185, 68, 75, 0.10);
+        border-left: 4px solid var(--rose);
+        background: var(--rose-soft);
         color: var(--text-main);
-        border-radius: 7px;
+        border-radius: 9px;
         margin: 0.25rem 0 1rem;
     }
     .prediction-card {
         background: var(--panel-bg);
         border: 1px solid var(--border);
-        border-radius: 10px;
+        border-radius: 12px;
         padding: 20px;
         box-shadow: 0 16px 34px rgba(15, 23, 42, 0.07);
     }
     .small-muted {
         color: var(--text-muted);
         font-size: 0.86rem;
+    }
+    .report-card {
+        background: var(--panel-bg);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 16px 18px;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
+        margin-bottom: 0.9rem;
+    }
+    .report-title {
+        font-weight: 800;
+        color: var(--text-main);
+        margin-bottom: 0.25rem;
+    }
+    .report-meta {
+        color: var(--text-muted);
+        font-size: 0.88rem;
+    }
+    .thin-rule {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--border), transparent);
+        margin: 1rem 0;
     }
     </style>
     """,
@@ -335,6 +367,20 @@ def status_pill(text: str) -> None:
     st.markdown(f'<div class="status-pill">{escape(text)}</div>', unsafe_allow_html=True)
 
 
+def report_card(label: str, description: str, status: str = "Ready") -> None:
+    st.markdown(
+        f"""
+        <div class="report-card">
+            <div class="report-title">{escape(label)}</div>
+            <div class="report-meta">{escape(description)}</div>
+            <div class="thin-rule"></div>
+            <div class="report-meta"><strong>Status:</strong> {escape(status)}</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 def final_sentiment_output(text: str, model_prediction: str) -> tuple[str, float, list[str]]:
     polarity = TextBlob(text).sentiment.polarity
     lowered = text.lower()
@@ -409,6 +455,7 @@ page = st.sidebar.radio(
         "Sentiment Analysis",
         "At-Risk Cohorts",
         "Model Performance",
+        "HR Recommendations",
         "Predict Sentiment",
         "Reports",
     ],
@@ -474,17 +521,25 @@ elif page == "Sentiment Analysis":
         st.markdown('</div>', unsafe_allow_html=True)
     with col2:
         image("sentiment_distribution.png")
+        st.markdown(
+            '<div class="small-muted">The distribution helps verify whether comments lean positive, neutral, or negative before model use.</div>',
+            unsafe_allow_html=True,
+        )
 
     section("Sentiment Across Employee Groups", "Compare sentiment proportions by demographics and location.")
     gender_sentiment = load_report_csv("sentiment_by_gender.csv")
     country_sentiment = load_report_csv("sentiment_by_country_top10.csv")
     g1, g2 = st.columns(2)
     with g1:
+        st.markdown('<div class="panel">', unsafe_allow_html=True)
         st.markdown("**By gender**")
         st.dataframe(gender_sentiment, use_container_width=True, hide_index=True)
+        st.markdown('</div>', unsafe_allow_html=True)
     with g2:
+        st.markdown('<div class="panel">', unsafe_allow_html=True)
         st.markdown("**Top countries by negative sentiment ratio**")
         st.dataframe(country_sentiment, use_container_width=True, hide_index=True)
+        st.markdown('</div>', unsafe_allow_html=True)
 
     section("Comment Explorer", "Filter and inspect employee comments used in sentiment analysis.")
     sentiment_filter = st.multiselect(
@@ -493,12 +548,14 @@ elif page == "Sentiment Analysis":
         default=["Negative", "Neutral", "Positive"],
     )
     filtered = comments_df[comments_df["sentiment"].isin(sentiment_filter)]
+    st.markdown('<div class="panel">', unsafe_allow_html=True)
     st.dataframe(
         filtered[["Age", "Gender", "Country", "work_interfere", "treatment", "sentiment", "comments"]]
         .head(100),
         use_container_width=True,
         hide_index=True,
     )
+    st.markdown('</div>', unsafe_allow_html=True)
 
 
 elif page == "At-Risk Cohorts":
@@ -515,14 +572,20 @@ elif page == "At-Risk Cohorts":
 
     c1, c2, c3 = st.columns(3)
     with c1:
+        st.markdown('<div class="panel">', unsafe_allow_html=True)
         st.markdown("**Treatment by age group**")
         st.dataframe(age, use_container_width=True, hide_index=True)
+        st.markdown('</div>', unsafe_allow_html=True)
     with c2:
+        st.markdown('<div class="panel">', unsafe_allow_html=True)
         st.markdown("**Treatment by family history**")
         st.dataframe(family, use_container_width=True, hide_index=True)
+        st.markdown('</div>', unsafe_allow_html=True)
     with c3:
+        st.markdown('<div class="panel">', unsafe_allow_html=True)
         st.markdown("**Treatment by work interference**")
         st.dataframe(work, use_container_width=True, hide_index=True)
+        st.markdown('</div>', unsafe_allow_html=True)
 
     section("Supporting Visualizations", "Demographic and workplace factors connected to wellness patterns.")
     v1, v2 = st.columns(2)
@@ -541,7 +604,9 @@ elif page == "At-Risk Cohorts":
 elif page == "Model Performance":
     status_pill("Model Evaluation")
     section("Model Comparison", "Classifier performance across sentiment labels.")
+    st.markdown('<div class="panel">', unsafe_allow_html=True)
     st.dataframe(model_results, use_container_width=True, hide_index=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
     best = model_results.sort_values(["Weighted F1", "Accuracy"], ascending=False).iloc[0]
     m1, m2, m3 = st.columns(3)
@@ -563,6 +628,61 @@ elif page == "Model Performance":
         '<div class="status-note">Logistic Regression was selected because it achieved the highest Weighted F1 score, which is a better selection metric than accuracy alone for this multi-class sentiment task.</div>',
         unsafe_allow_html=True,
     )
+
+
+elif page == "HR Recommendations":
+    status_pill("HR Guidance")
+    section(
+        "HR Recommendations",
+        "Actionable guidance derived from treatment status, family history, work interference, and comment sentiment.",
+    )
+
+    st.markdown(
+        '<div class="panel">'
+        '<div class="report-title">Recommended Actions</div>'
+        '<div class="thin-rule"></div>'
+        '<div class="insight-list">'
+        '<div class="insight">Provide targeted mental health support for employees reporting frequent work interference.</div>'
+        '<div class="insight">Increase visibility of confidential help channels, anonymity settings, and care options.</div>'
+        '<div class="insight">Offer proactive check-ins for employees with family history risk factors or repeated negative sentiment.</div>'
+        '<div class="insight">Monitor high-risk age groups and repeated stress signals, but avoid making individual decisions from model output alone.</div>'
+        '<div class="insight">Use survey trends as a wellness signal, not a diagnostic or performance-management tool.</div>'
+        '</div>'
+        '</div>',
+        unsafe_allow_html=True,
+    )
+
+    left, right = st.columns([1.05, 0.95])
+    with left:
+        st.markdown("**Priority actions for HR**")
+        st.markdown(
+            """
+            1. Improve access to confidential mental health support and clear escalation paths.
+            2. Reassure employees about anonymity and non-retaliation in wellness surveys.
+            3. Schedule structured check-ins for teams with high work-interference rates.
+            4. Strengthen manager awareness around early signs of burnout, stress, and disengagement.
+            5. Review policy visibility so employees can quickly find benefits and support options.
+            """
+        )
+    with right:
+        st.markdown("**Supporting evidence**")
+        st.markdown(
+            """
+            - Family history shows a strong relationship with treatment-seeking behavior.
+            - Work interference is one of the strongest risk signals in this dataset.
+            - Negative comments should be reviewed as wellness indicators, not isolated complaints.
+            - HR should focus on support and trend monitoring rather than individual inference.
+            """
+        )
+
+    section("Related Report", "The same recommendations are also documented in the final report.")
+    report_path = REPORTS_DIR / "hr_recommendations.md"
+    if report_path.exists():
+        st.markdown('<div class="panel">', unsafe_allow_html=True)
+        st.markdown(report_path.read_text(encoding="utf-8"))
+        st.markdown('</div>', unsafe_allow_html=True)
+    else:
+        st.info("HR recommendations report is not available yet.")
 
 
 elif page == "Predict Sentiment":
@@ -623,7 +743,19 @@ elif page == "Reports":
     }
     selected_report = st.selectbox("Report", list(report_files.keys()))
     report_path = REPORTS_DIR / report_files[selected_report]
+    files = [
+        ("Documentation", "Word document and markdown copy of the final report."),
+        ("Model", "Trained TF-IDF sentiment pipeline."),
+        ("App", "Streamlit application entry point."),
+        ("Data", "Cleaned and processed datasets used by the app."),
+    ]
+    cols = st.columns(4)
+    for col, (label, desc) in zip(cols, files):
+        with col:
+            report_card(label, desc, "Included")
     if report_path.exists():
+        st.markdown('<div class="panel">', unsafe_allow_html=True)
         st.markdown(report_path.read_text(encoding="utf-8"))
+        st.markdown('</div>', unsafe_allow_html=True)
     else:
         st.info("This report file has not been generated yet.")
