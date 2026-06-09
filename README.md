@@ -2,9 +2,7 @@
 
 ## Project Overview
 
-This project follows the internship task PDF for building an NLP workflow that analyzes employee mental health survey responses, classifies comment sentiment, identifies at-risk cohorts, and prepares inputs for an Employee Wellness Dashboard.
-
-The dashboard itself has not been created yet, as requested. All work up to the dashboard-building step is prepared.
+This project follows the internship task PDF for building an NLP workflow that analyzes employee mental health survey responses, classifies comment sentiment, identifies at-risk cohorts, and presents insights through a professional Streamlit Employee Wellness Dashboard.
 
 ## Dataset
 
@@ -33,12 +31,8 @@ The dataset contains employee mental health survey responses from technology pro
 - Analyzed sentiment distribution across employee groups.
 - Identified at-risk cohorts using treatment, family history, work interference, age group, country, and negative sentiment.
 - Prepared HR insights and recommendation reports.
-
-### Not Done Yet
-
-- Employee Wellness Dashboard.
-
-This is the next step in the PDF after the current completed work.
+- Developed a Streamlit Employee Wellness Dashboard.
+- Added final documentation for methodology, results, accuracy, and achievements.
 
 ## Important Note About Sentiment Labels
 
@@ -75,6 +69,7 @@ Mental_Health_Sentiment_Analyzer/
 |   |-- mental_health_model.pkl
 |   `-- sentiment_tfidf_pipeline.pkl
 |-- reports/
+|   |-- final_documentation_report.md
 |   |-- sentiment_analysis_report.md
 |   |-- at_risk_cohort_report.md
 |   |-- hr_recommendations.md
@@ -100,6 +95,7 @@ Mental_Health_Sentiment_Analyzer/
 |   |-- sentiment_model_comparison.png
 |   `-- sentiment_confusion_matrix.png
 |-- README.md
+|-- app.py
 |-- requirements.txt
 `-- .gitignore
 ```
@@ -120,6 +116,19 @@ python scripts/complete_until_dashboard.py
 
 This regenerates the processed comment dataset, EDA visuals, sentiment model, model metrics, and pre-dashboard reports.
 
-## Next Step
+## Run Streamlit App
 
-Build the Employee Wellness Dashboard using the prepared files in `Data/`, `reports/`, `visuals/`, and `models/`.
+```bash
+streamlit run app.py
+```
+
+## Final Submission Contents
+
+For Google Classroom ZIP submission, include:
+
+- Documentation report: `reports/final_documentation_report.md`
+- Model files: `models/`
+- Streamlit application: `app.py`
+- Required datasets: `Data/`
+- Supporting reports and visuals: `reports/`, `visuals/`
+- Notebooks and reproducible script: `Notebooks/`, `scripts/`

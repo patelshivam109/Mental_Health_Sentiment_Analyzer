@@ -10,3 +10,4 @@ joblib
 pillow
 pypdf
 jupyter
+streamlit
